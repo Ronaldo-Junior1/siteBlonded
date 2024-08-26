@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blonded</title>
+    <link rel="stylesheet" href="../folhasDeEstilo/style.css">
+    <link rel="stylesheet" href="../folhasDeEstilo/contato.css">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <figure>
+            <img src="../imagens/blondedLogo.png" alt="logo" width="140px">
+        </figure>
+        <button class="menuToggle">
+            <img src="../imagens/menuHamburguer.png" alt="menu" width="30px"> 
+        </button>
+        <nav class="menu">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="albuns.html">Albuns</a></li>
+                <li class="dropdown">
+                    <a href="frankOcean.html" class="dropbtn">Cantores</a>
+                    <ul class="dropdownContent">
+                        <li><a href="frankOcean.html">Frank</a></li>
+                        <li><a href="https://www.youtube.com/watch?v=ZKjIHQxG_3Q&list=OLAK5uy_lzJXyds7tiw-cUS9Zg9wXRSiWpNJM6i7s&index=10" target="_blank">Tyler</a></li>
+                        <li><a href="https://youtu.be/B9synWjqBn8?si=wbXipwFx0xjVlRjw" target="_blank">Travis</a></li>
+                    </ul>
+                </li>                    
+            </ul>
+        </nav>            
+    </header>
+
+    <main class="secaoSite main">
+    
+        <section class="formulario">
+            <h2>Formulário de Contato</h2>
+            <form>
+                <fieldset class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </fieldset class="form-group">
+                    
+            
+                <fieldset class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </fieldset class="form-group">
+                    
+                
+                <fieldset class="form-group">
+                    <label for="show">Data do show:</label>
+                    <input type="date" id="show" name="show" required>
+                </fieldset class="form-group">
+                    
+                <fieldset class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </fieldset class="form-group">
+                    
+              
+
+                <fieldset class="form-group">
+                    <label for="cantor">Cantor:</label>
+                    <select id="cantor" name="cantor" required>
+                        <option value="" selected disabled>Escolha</option>
+                        <option value="Frank Ocean">Frank Ocean</option>
+                        <option value="Tyler, The Creator">Tyler, The Creator</option>
+                        <option value="Travis Scott">Travis Scott</option>
+                    </select>
+                </fieldset class="form-group">
+                    
+
+                <button type="button" id="Enviar" onclick="exibirResultado(this.form)">Enviar</button>
+                <button type="reset" id="Limpar" onclick="limparResultado()">Limpar</button>
+
+                <fieldset id="resultado">
+                    <legend>Resultado</legend>
+                    <p>Informações enviadas com sucesso!</p>
+                    <p id="nomeEnviado"></p>
+                    <p id="emailEnviado"></p>
+                    <p id="mensagemEnviada"></p>
+                    <p id="cantorEnviado"></p>
+                    <p id="dataEnviada"></p>
+                </fieldset>
+            </form>
+
+            
+        </section>
+    </main>
+
+    <footer class="siteFooter">
+        <address>
+            <p>Blonded Records</p>
+            <p>1234 Music Avenue, Suite 500</p>
+            <p>Los Angeles, CA, 90001</p>
+            <p>Email: <a href="mailto:contact@blondedrecords.com">contact@blondedrecords.com</a></p>
+            <p>Telefone: <a href="tel:+11234567890">(123) 456-7890</a></p>
+            <p>Horario de Funcionamento: Segunda a Sexta, 9h - 18h</p>
+        </address>
+        <section class="socialMedia">
+            <p>Nos siga nas redes sociais:</p>
+            <p>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+                <a href="https://www.twitter.com" target="_blank">Twitter</a> |
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </p>
+        </section>
+        <section class="siteInfo">
+            <p>&copy; 2024 Blonded Records. Todos os direitos reservados.</p>
+            <p><a href="#">Termos</a> | <a href="#">Politica de Privacidade</a></p>
+        </section>
+    </footer>
+
+    <script src="../scripts/contato.js"></script>
+    <script src="../scripts/menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+body{
+    background-color: #001524;
+    display: flex;
+    flex-flow: column wrap;
+    
+}
+.formulario fieldset{
+    border: none;
+}
+.formulario {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 500px;
+}
+
+.formulario h2 {
+    font-family: 'Bebas Neue';
+    color: #001524;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-family: 'Blond';
+    color: #001524;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="button"] {
+    background-color: #FBC701;
+    color: #001524;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #ffffff;
+    color: #001524;
+    border: 1px solid black;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+
+button[type="button"]:hover {
+    background-color: #e0a800;
+}
+
+button[type="reset"]:hover {
+    background-color: #001524;
+    color: #ffecd1;
+}
+
+footer{
+    margin-top: 200px;
+}
+
+
+#resultado{
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #000000;
+}
+
+#resultado p, #resultado legend{
+    color: #001524;
+} 
+
+.secaoSite{
+    height: 100%;
+}
+
+@media (min-width: 769px) {
+    .menuToggle{
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .siteFooter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .siteFooter address,
+    .siteFooter .socialMedia,
+    .siteFooter .siteInfo {
+        margin: 10px 0;
+    }
+
+    .siteFooter a {
+        display: block;
+        margin: 5px 0;
+    }
+}

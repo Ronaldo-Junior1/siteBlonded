@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Blond';
+    src: url(../fontes/Longhaul.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #edf2f4;
+}
+
+header {
+    background-color: #001524;
+    display: flex;
+    justify-content: space-between;
+}
+
+header:first-child {
+    padding-left: 50px;
+}
+
+.menu {
+    font-family: 'Blond';
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #FBC701;
+}
+
+.menu ul li {
+    padding: 10px;
+    display: inline-block;
+}
+
+.menu ul li:last-child {
+    margin-right: 50px;
+}
+
+.secaoSite {
+    height: 100vh;
+}
+
+.main {
+    color: #ffecd1;
+    background-color: #001524;
+}
+
+.main h1 {
+    font-family: "Bebas Neue";
+    text-align: center;
+    font-size: 4vw;
+}
+
+.artistas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.secao2 {
+    font-family: 'Blond';
+    color: #001524;
+    font-size: 1.8em;
+    background-color: #edf2f4;
+    margin-top: 50px;
+    margin-bottom: 120px;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.siteFooter {
+    background-color: #001524;
+    color: #ffecd1;
+    padding: 20px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Blond', sans-serif;
+    text-align: left; 
+}
+
+.siteFooter address,
+.siteFooter .socialMedia,
+.siteFooter .siteInfo {
+    flex: 1; 
+    margin: 0 10px;
+}
+
+.siteFooter address {
+    font-style: normal;
+    line-height: 1.6; 
+}
+
+.siteFooter a {
+    color: #FBC701;
+    text-decoration: none;
+}
+
+.siteFooter a:hover {
+    text-decoration: underline;
+}
+
+.socialMedia p {
+    margin: 0;
+}
+
+.socialMedia a {
+    margin: 0 5px;
+}
+
+.siteInfo p {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.siteInfo a {
+    color: #FBC701;
+    text-decoration: none;
+}
+
+.siteInfo a:hover {
+    text-decoration: underline;
+}
+
+li .dropdown {
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    padding: 16px 20px;
+}
+
+.dropdownContent {
+    display: none; 
+    position: absolute;
+    left: 0; 
+    background-color: #001524;
+    width: 150px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.dropdown:hover .dropdownContent {
+    display: block; 
+}
+
+
+.dropdownContent a {
+    color: #FBC701;
+    display: block;
+    text-align: left; 
+    text-decoration: none; 
+    padding: 10px;
+}
+
+/* Estilo de hover para itens do submenu */
+.dropdownContent a:hover, nav ul li a:hover {
+    color: #edf2f4;
+}
+
+#restrito {
+    position: absolute; 
+    right: 0; 
+    top: 0;
+}
+
+.show {
+    display: block;
+}
+
+.menuToggle {
+    
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding-right: 50px;
+}
+
+
+@media (max-width: 768px) {
+    .menuToggle {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 200px;
+        background-color: #001524;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu ul li {
+        padding: 15px 0;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .menu.show {
+        display: flex;
+    }
+
+    .menu ul li:last-child {
+        margin-right: 0;
+    }
+
+    .dropdownContent {
+        position: static;
+        width: 100%;
+    }
+
+    .main figure, #restrito {
+        display: none; 
+    }
+
+    .secaoSite {
+        height: 100%;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        height: 400px;
+    }
+
+    .main h1 {
+        font-size: 6vw;
+    }
+
+    .artistas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .artistas article {
+        margin-bottom: 20px;
+    }
+
+    .artistas figure img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .secao2 {
+        font-size: 1.2em;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .secao2 h2 {
+        margin-bottom: 20px;
+    }
+
+    .siteFooter {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .siteFooter address,
+    .siteFooter .socialMedia,
+    .siteFooter .siteInfo {
+        margin: 10px 0;
+    }
+
+    .siteFooter a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 769px) {
+    .menuToggle{
+        display: none;
+    }
+}
